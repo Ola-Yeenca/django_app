@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Home, About, Profile, Category, Skills, Languages
+from .models import Home, About, Profile, Category, Skills, Portfolio
 
 # Register your models here.
 
@@ -30,7 +30,7 @@ class CategoryAdmin(admin.ModelAdmin):
     inlines = [SkillsInline]
 
 
-#LANGUAGES
-admin.site.register(Languages)  
+#PORTFOLIO
+admin.site.register(Portfolio)
 
 # Compare this snippet from portfolio/urls.py:

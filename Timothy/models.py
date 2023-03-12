@@ -1,4 +1,6 @@
 from django.db import models
+from django.db import migrations
+
 
 # Create your models here.
 
@@ -55,22 +57,41 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+
+def add_default_skill_image(apps, schema_editor):
+    Skill = apps.get_model('yourappname', 'Skills')
+    Skill.objects.filter(skill_image=None).update(skill_image='images/default_skill_image.jp')
+
+class Migration(migrations.Migration):
+    dependencies = [('Timothy', '0001_initial'),]
+
+    operations = [
+        migrations.AddField(
+            model_name='skill',
+            name='skill_image',
+            field=models.ImageField(
+                upload_to='skill_images/', default='images/default_skill_image.jp'),
+                preserve_default=False,
+                ),
+                migrations.RunPython(add_default_skill_image),
+                ]
 class Skills(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     name = models.CharField(max_length=30)
     percentage = models.IntegerField()
+    skill_image = models.ImageField(upload_to='images/', null=True, blank=True)
 
     updated = models.DateTimeField(auto_now=True)
 
 
-#LANGUAGE SECTION
+#PORTFOLIO SECTION
 
-class Languages(models.Model):
+class Portfolio(models.Model):
     name = models.CharField(max_length=30)
-    image = models.ImageField(upload_to='images/')
+    portfolio_image = models.ImageField(upload_to='portfolio/')
     percentage = models.IntegerField()
 
     updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f'Languages {self.id}'
+        return f'Portfolio {self.id}'
