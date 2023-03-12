@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ola Yinka's Portfolio</title>
+    <meta name="description" content="Page description. No longer than 155 characters.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type='text/css' href="{% static '/assets/stylesheet/application.css' %}">
+</head>
+<body class="light-mode">
+  {% block content %}
+  {% endblock %}
+  <button id="toggle-theme">Toggle Theme</button>
+    <!-- Content -->
+    <script src= "{% static '/assets/javascript/application.js' %}">
+
+    </script>
+</body>
+</html>

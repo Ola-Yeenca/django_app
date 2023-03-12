@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+/* light mood */
+:root {
+  --background-color: #fff;
+  --text-color: #333;
+}
+
+/* dark mood */
+.dark {
+  --background-color: #333;
+  --text-color: #fff;
+}
+
+.light-mode {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.dark-mode {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
