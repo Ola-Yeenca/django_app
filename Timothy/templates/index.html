@@ -7,15 +7,22 @@
     <title>Ola Yinka's Portfolio</title>
     <meta name="description" content="Page description. No longer than 155 characters.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type='text/css' href="{% static '/assets/stylesheet/application.css' %}">
+    <link rel="stylesheet" type='text/css' href="{% static 'assets/stylesheet/application.css' %}">
+    <link rel="stylesheet" type='text/css' href="{% static 'assets/stylesheet/light-mode.css' %}" id="theme-style">
 </head>
-<body class="light-mode">
-  {% block content %}
-  {% endblock %}
-  <button id="toggle-theme">Toggle Theme</button>
-    <!-- Content -->
-    <script src= "{% static '/assets/javascript/application.js' %}">
+<body>
+  <div id="next">
+    <div class="scroll-snap">
+      
+    </div>
+  </div>
 
-    </script>
-</body>
+
+
+
+
+
+
+    <script src="{% static 'assets/javascript/application.js' %}"></script>
+  </body>
 </html>
