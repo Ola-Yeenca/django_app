@@ -2,6 +2,7 @@ from django.db import models
 from django.db import migrations
 
 
+
 # Create your models here.
 
 #HOMEPAGE SECTION
