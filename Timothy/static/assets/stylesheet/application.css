@@ -2,22 +2,47 @@
   background-color: #242424;
 }
 
-.socials {
-  top: sticky;
-  top: 0;
-  padding: 5px;
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
+:alpha {
+  main-color: #51B4CB;
 }
 
-.socials-container {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  position: relative;
-  margin: 0 5px;
+.socials {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.socialsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  margin: 0 auto;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+}
+
+.socialsContainer a {
+  margin: 0 5px;
+}
+
+.emailMe {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: grey;
+  cursor: pointer;
+}
+
+.snap-center {
+  scroll-snap-type: center;
+}
+
+.heroFlex {
+  display: flex;
+  flex-direction: column;
+
 }
