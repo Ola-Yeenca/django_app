@@ -9,279 +9,179 @@
     <meta name="description" content="Page description. No longer than 155 characters.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type='text/css' href="{% static 'assets/stylesheet/application.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
+
 <body>
   <body>
-    <header class="socials max-w-7xl mx-auto z-20 xl:items-center">
-      <div class="socialsContainer">
-        <a href="">Twitter</a>
-        <a href="">LinkedIn</a>
-        <a href="">Instagram</i></a>
-        <a href="">Facebook</a>
-      </div>
+    <header class="header">
+      <a href="#" class="logo">Portfolio</a>
 
-      <div class="emailMe">
-        <a href="">Get In Touch.</a>
-      </div>
+      <i class='bx bx-menu' id="menu-icon"></i>
+
+      <navbar class="navbar">
+        <a href="#home" id="active" class="nav-button">Home</a>
+        <a href="#about" class="nav-button">About</a>
+        <a href="#tech-stack" class="nav-button">Technologies</a>
+        <a href="#portfolio" class="nav-button">Portfolio</a>
+        <a href="#contact" class="nav-button">Contact</a>
+      </navbar>
     </header>
 
-    <section class="snap-center" id="hero">
-      <div class="h-screen heroFlex space-y-8">
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Software Developer</h3>
+        <h1><span>Hello, I am Ola Yinka</span></h1>
 
-        <img src="" alt="">
-        <h2>Software Developer</h2>
+        <div class="social-media">
+          <a href="www.twitter.com/Ola_Yeenca"><i class='bx bxl-twitter' ></i></a>
+          <a href="www.instagram.com/yinka_96/"><i class='bx bxl-instagram' ></i></a>
+          <a href="www.github.com/Ola-Yeenca"><i class='bx bxl-github' ></i></a>
+          <a href="www.linkedin.com/in/timothy-olaonipekun-omoniyi-aa8975186/"><i class='bx bxl-linkedin' ></i></a>
+        </div>
 
-        <h1>
-          <span>
-            Hello, I am Ola Yinka
-          </span>
-        </h1>
+        <a href="#" class="btn">Download CV</a>
       </div>
 
-      <div class="infomation">
-        <a href=""><button class="heroButton">About</button></a>
-        <a href=""><button class="heroButton">Skills</button></a>
-        <a href=""><button class="heroButton">Portfolio</button></a>
-        <a href=""><button class="heroButton">Contact</button></a>
-      </div>
-    </section>
-
-    <section class="snap-center" id="about">
-      <div class="about">
-        <h3>
-          About Me
-        </h3>
-
-        <img src="" alt="">
-
-        <div class="aboutDetail">
-          <h4 class="detailHeading">
-            Here is a little Detail...
-          </h4>
-        </div>
-
-        <p class="detail">
-          My name is <span>
-            Timothy Olaonipekun Omoniyi
-          </span>
-          I am a self-taught and bootcamp-trained full-stack developer who recently transitioned into the tech industry.
-          I discovered my love for programming through Python and have been learning the language via various online resources,
-          including Udemy. This eventually led me to complete the Le Wagon Bootcamp in Barcelona, where I gained valuable experience
-          working on group projects. Despite being employed as a delivery driver for Amazon, I have been dedicating my free time
-          to continuing my studies, particularly in the area of Python with a focus on the Django framework.
-          I am currently enrolled in a course offered by Harvard University(CS50) and am making progress towards my goal of becoming
-          a skilled and competent developer. As I am eager to gain more hands-on experience in the field,
-          I would be grateful for any opportunity, even a non-payable internship, to work with a team and contribute
-          to the development of real-world projects. I am committed to continuous learning and personal development,
-          and I believe that such an opportunity would be a valuable step towards achieving my career aspirations.
-        </p>
-      </div>
-    </section>
-
-    <section class="snap-center" id="skills">
-      <div class="skills">
-        <h3 class="skillsHeading">
-          Hover over skills for proficiency
-        </h3>
-
-        <div class="skillsImages">
-          <div class="skillImage">
-            <img src="" alt="">
-          </div>
-
-          <div class="skillProficiency">
-            <p class="proficiency">
-              100%
-            </p>
-          </div>
-        <div class="skillsImages">
-          <div class="skillImage">
-            <img src="" alt="">
-          </div>
-
-          <div class="skillProficiency">
-            <p class="proficiency">
-              100%
-            </p>
-          </div>
-        <div class="skillsImages">
-          <div class="skillImage">
-            <img src="" alt="">
-          </div>
-
-          <div class="skillProficiency">
-            <p class="proficiency">
-              100%
-            </p>
-          </div>
-        <div class="skillsImages">
-          <div class="skillImage">
-            <img src="" alt="">
-          </div>
-
-          <div class="skillProficiency">
-            <p class="proficiency">
-              100%
-            </p>
-          </div>
-        <div class="skillsImages">
-          <div class="skillImage">
-            <img src="" alt="">
-          </div>
-
-          <div class="skillProficiency">
-            <p class="proficiency">
-              100%
-            </p>
-          </div>
-        <div class="skillsImages">
-          <div class="skillImage">
-            <img src="" alt="">
-          </div>
-
-          <div class="skillProficiency">
-            <p class="proficiency">
-              100%
-            </p>
-          </div>
-        <div class="skillsImages">
-          <div class="skillImage">
-            <img src="" alt="">
-          </div>
-
-          <div class="skillProficiency">
-            <p class="proficiency">
-              100%
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="snap-start" id="portfolio">
-      <div class="portfolio">
-        <h3 class="portfolioHeading">
-          Portfolio
-        </h3>
-
-        <div class="portfolioImages">
-          <div class="portfolioTitle">
-            <h4 class="title">
-
-              <span class="portfolioCounter">"Case Study"
-                <!--  -->
-                "1"
-                <!-- -->
-                "of"
-                <!-- -->
-                "3"
-              </span>
-              Project Title
-            </h4>
-          </div>
-        </div>
-        <div class="portfolioImages">
-          <div class="portfolioTitle">
-            <h4 class="title">
-
-              <span class="portfolioCounter">"Case Study"
-                <!--  -->
-                "1"
-                <!-- -->
-                "of"
-                <!-- -->
-                "3"
-              </span>
-              Project Title
-            </h4>
-          </div>
-        </div>
-        <div class="portfolioImages">
-          <div class="portfolioTitle">
-            <h4 class="title">
-
-              <span class="portfolioCounter">"Case Study"
-                <!--  -->
-                "1"
-                <!-- -->
-                "of"
-                <!-- -->
-                "3"
-              </span>
-              Project Title
-            </h4>
-          </div>
-        </div>
-        <div class="portfolioImages">
-          <div class="portfolioTitle">
-            <h4 class="title">
-
-              <span class="portfolioCounter">"Case Study"
-                <!--  -->
-                "1"
-                <!-- -->
-                "of"
-                <!-- -->
-                "3"
-              </span>
-              Project Title
-            </h4>
-          </div>
-        </div>
+      <div class="home-img">
+        <img src="/static/images/profile-picture.png" alt="Ola Yinka">
       </div>
 
     </section>
 
-    <section class="snap-start" id="contact">
-      <div class="contactMe">
-        <h3 class="contactHeading">
-          Contact Yinka
-        </h3>
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="/static/images/support.png" alt="Ola Yinka">
+      </div>
 
-        <div class="contact">
-          <div class="contactInfo">
-            <h4 class="contactInfoHeading">
-              Let me work with your team
-            </h4>
-        </div>
-
-        <div class="myNumber">
+        <div class="about-content">
+          <h2 class="heading">About</h2>
+          <h3>Here is a little about me</h3>
           <p>
-            +34 631 789 277
+            My name is <span>Timothy Olaonipekun Omoniyi</span>
+            I am a self-taught and bootcamp-trained full-stack developer who recently transitioned into the tech industry.
+            I discovered my love for programming through Python and have been learning the language via various online resources,
+            including Udemy. This eventually led me to complete the Le Wagon Bootcamp in Barcelona, where I gained valuable experience
+            working on group projects. Despite being employed as a delivery driver for Amazon, I have been dedicating my free time
+            to continuing my studies, particularly in the area of Python with a focus on the Django framework.
+            I am currently enrolled in a course offered by Harvard University(CS50) and am making progress towards my goal of becoming
+            a skilled and competent developer. As I am eager to gain more hands-on experience in the field,
+            I would be grateful for any opportunity, even a non-payable internship, to work with a team and contribute
+            to the development of real-world projects. I am committed to continuous learning and personal development,
+            and I believe that such an opportunity would be a valuable step towards achieving my career aspirations.
+          </p>
+
+          <a href="#" class="btn">Read more</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="tech-stack" id="tech-stack">
+      <h2 class="heading"><span>Languages</span></h2>
+
+      <div class="tech-stack-container">
+        <div class="tech-stack-box">
+          <i class='bx bxl-html5' ></i>
+          <i class='bx bxl-css3' ></i>
+          <i class='bx bxl-javascript' ></i>
+          <h3>HTML, CSS & Javascript</h3>
+          <p>As a skilled web developer, I possess a strong foundation in the core web technologies, including HTML, CSS, and JavaScript. I am well-versed in using CSS preprocessors such as SCSS and have experience working with popular CSS frameworks like Tailwind and Bootstrap to streamline my development process and ensure responsive, accessible, and visually appealing designs.
           </p>
         </div>
 
-        <div class="emailMe">
-          <p>
-            olayinkatimothy102@gmail.com
-          </p>
+
+        <div class="tech-stack-box">
+          <i class='bx bxl-python' ></i>
+          <h3>Python and Django</h3>
+          <p>Through my dedicated work and the guidance provided by Harvard Courses (CS50), I have been able to develop highly functional and visually stunning web applications. The skills and knowledge that I have acquired from the course have enabled me to create applications that not only meet but exceed the expectations of users.</p>
         </div>
 
-        <div class="locateMe">
-          <p>
-            Valencia, Spain
-          </p>
+        <div class="tech-stack-box">
+          <i class='bx bxl-python' ></i>
+          <h3>Ruby On Rails</h3>
+          <p>Thanks to Le Wagon Bootcamp, I've developed my skills as a Ruby on Rails developer, creating impressive applications such as AirOffice and StudyFlow with ease. Their intensive training and live coaching provided expertise in programming languages and web development frameworks. Collaborating with colleagues enabled me to learn from others, hone my skills and gain a deeper understanding of web development. Teamwork and support have been key to our success.</p>
         </div>
+      </div></div>
+    </section>
 
-        <form action="" class="reachMe">
-          <div class="contactForm">
-            <input name="name" placeholder="Name or Company" class="contactInput" type="text">
-            <input name="email" placeholder="Email" class="contactInput" type="email">
+    <section class="portfolio" id="portfolio">
+      <h2 class="heading"> Recent <span>Project</span></h2>
+
+      <div class="portfolio-container">
+        <div class="portfolio-box">
+          <img src="/static/images/airoffice.png" alt="AirOffice">
+          <div class="portfolio-layer">
+            <h4>AirOffice</h4>
+
+            <p>AirOffice is a web application that allows users to book a workspace in a shared office.
+              Users can search for available workspaces by location and date, and book a workspace for a
+              specific time period. The application also allows users to create a profile and manage
+              their bookings.</p>
+
+              <a href="https://airoffice.herokuapp.com/" class="btn">View Project</a>
           </div>
-          <textarea name="message" placeholder="Message" class="contactInput" ></textarea>
-          <button class="contactButton" type="submit">Submit</button>
-        </form>
+        </div>
+
+        <div class="portfolio-box">
+          <img src="/static/images/studyflow-project.png" alt="AirOffice">
+          <div class="portfolio-layer">
+            <h4>StudyFlow</h4>
+
+            <p>AirOffice is a web application that allows users to book a workspace in a shared office.
+              Users can search for available workspaces by location and date, and book a workspace for a
+              specific time period. The application also allows users to create a profile and manage
+              their bookings.</p>
+
+              <a href="https://study-flow.herokuapp.com/" class="btn">View Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="heading">Reach Out To Me</h2>
+
+      <form action="#">
+        <div class="input-box">
+          <input type="text" placeholder="Full Name or Company's Name">
+          <input type="email" placeholder="Email Address">
+        </div>
+
+        <div class="input-box">
+          <input type="text" placeholder="Subject">
+        </div>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Messages"></textarea>
+        <input type="submit" value="Send Message" class="btn">
+      </form>
+
+      <div class="contact-information">
+        <div class="contact-box">
+          <i class='bx bx-phone-call' id="animate-pulse"></i>
+          <p>+34 631 789 277</p>
+        </div>
+
+        <div class="contact-box">
+          <i class='bx bxs-envelope' id="animate-pulse"></i>
+          <p>Olayinkatimothy102@gmail.com</p>
+        </div>
+
+        <div class="contact-box">
+          <i class='bx bxs-map' id="animate-pulse"></i>
+          <p>Valencia, Spain</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copywrite &copy; 2023 by Ola Yinka | All Rights Reserved.</p>
       </div>
 
-      <a href="/#hero">
-        <footer class="sticky">
-          <div class="footerLogo">
-            <img src="" alt="">
-          </div>
-        </footer>
-      </a>
-    </section>
-  <script src="{% static 'assets/javascript/application.js' %}"></script>
+      <div class="footer-iconTop">
+        <a href="#home"><i class='bx bxs-up-arrow-circle' id="animate-pulse"></i></a>
+      </div>
+    </footer>
+  <script type="module" src="{% static 'assets/javascript/application.js' %}"></script>
 </body>
 </html>

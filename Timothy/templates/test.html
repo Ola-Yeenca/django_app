@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Typewriter Text Display</title>
+  </head>
+  <body>
+    <div id="my-text"></div>
+    <script>
+      var texts = [
+        "This is the first text.",
+        "This is the second text.",
+        "This is the third text."
+      ];
+      var index = 0;
+      var charIndex = 0;
+      var intervalId = setInterval(function() {
+        var text = texts[index];
+        document.getElementById("my-text").textContent = text.substring(0, charIndex);
+        charIndex++;
+        if (charIndex > text.length) {
+          index++;
+          charIndex = 0;
+        }
+        if (index >= texts.length) {
+          index = 0;
+        }
+      }, 100);
+    </script>
+  </body>
+</html>
+
