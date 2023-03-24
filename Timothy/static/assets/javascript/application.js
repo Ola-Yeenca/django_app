@@ -1,39 +1,59 @@
-document.addEventListener("DOMContentLoaded", function() {
-  function useTypewriter(words, loop=true, delaySpeed=500) {
-    const typewriter = document.querySelector('#typewriter');
-    let text = '';
-    let count = 0;
-    let isDeleting = false;
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('header nav a');
 
-    setInterval(() => {
-      const currentWord = words[count];
-      const currentText = text.substring(0, text.length - isDeleting);
-      const currentLength = currentText.length;
+  window.addEventListener('scroll', function() {
+    const currentScrollPos = window.pageYOffset;
 
-      if (!isDeleting && currentLength === currentWord.length) {
-        isDeleting = true;
-      } else if (isDeleting && currentLength === 0) {
-        count = (count + 1) % words.length;
-        isDeleting = false;
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+
+      if (currentScrollPos >= sectionTop - sectionHeight * 0.25 &&
+          currentScrollPos < sectionTop + sectionHeight * 0.75) {
+        const currentSection = section.getAttribute('id');
+        console.log('Current section:', currentSection);
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href').includes(currentSection)) {
+            link.classList.add('active');
+            console.log('Active link:', link);
+          }
+        });
       }
+    });
+          //==============sticky navbar ====================//
 
-      text = isDeleting
-        ? currentWord.substring(0, currentLength - 1)
-        : currentWord.substring(0, currentLength + 1);
+          let header = document.querySelector('header');
 
-      typewriter.innerHTML = text;
-      if (isDeleting || currentLength < currentWord.length) {
-        typewriter.classList.remove('visible');
-      } else {
-        typewriter.classList.add('visible');
-      }
-    }, isDeleting ? delaySpeed / 2 : delaySpeed);
-  }
 
-  useTypewriter([
-    'Hello, I am Ola Yinka ',
-    'Developer',
-    'Designer',
-    'Freelancer'
-  ]);
+          header.classList.toggle('sticky', window.scrollY > 100)
+
+
+          //=====================toggle icon navbar=====================//
+
+
+          let menuIcon = document.querySelector('#menu-icon');
+          let navbar = document.querySelector('.navbar');
+
+          menuIcon.onclick = () => {
+            menuIcon.classList.toggle('bx-x');
+            navbar.classList.toggle('active');
+          }
+
+          //=====================remove toggle icon and navbar when navlink is clicked (scroll) =====================//
+
+          menuIcon.classList.remove('bx-x')
+          navbar.classList.remove('active')
+          
+
+
+
+
+  });
 });
+
+
+
+//=====================change portfolio header to logo=====================//
