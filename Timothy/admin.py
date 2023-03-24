@@ -1,10 +1,6 @@
 from django.contrib import admin
 from .models import Home, About, Profile, Category, Skills, Portfolio
 
-# Register your models here.
-
-#HOME
-
 admin.site.register(Home)
 
 

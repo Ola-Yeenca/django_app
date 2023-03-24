@@ -30,10 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
           header.classList.toggle('sticky', window.scrollY > 100)
 
-
           //=====================toggle icon navbar=====================//
-
-
           let menuIcon = document.querySelector('#menu-icon');
           let navbar = document.querySelector('.navbar');
 
@@ -46,13 +43,50 @@ document.addEventListener('DOMContentLoaded', function() {
 
           menuIcon.classList.remove('bx-x')
           navbar.classList.remove('active')
-          
-
-
-
-
   });
 });
+
+
+// scroll reveal
+
+document.addEventListener('DOMContentLoaded', function() {
+  ScrollReveal({
+    // reset: true,
+    distance: '80px',
+    duration: 2000,
+    // easing: 'ease-in-out',
+    delay: 200,
+  });
+
+  ScrollReveal().reveal('.home-content, .headings', { origin: 'top' });
+  ScrollReveal().reveal('.home-img, .tech-stack-container, .portfolio-box', '.contact form', { origin: 'bottom' });
+  ScrollReveal().reveal('.about-img, .home-content h1', { origin: 'left' });
+  ScrollReveal().reveal('.about-content, .home-content p', { origin: 'right' });
+});
+
+// typed js
+
+document.addEventListener('DOMContentLoaded', function() {
+  const typed = new Typed('.multiple-text', {
+    strings: ['Hello, I am Ola Yinka', 'Web Developer', 'Web Designer', 'Freelancer'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    loop: true,
+  });
+});
+
+// read more paragraaph reveal
+
+document.addEventListener('DOMContentLoaded', function() {
+  const paragraph = document.getElementById('paragraph');
+  const readMoreBtn = document.getElementById('read-more');
+
+  readMoreBtn.addEventListener('click', () => {
+    paragraph.classList.toggle('expanded');
+    readMoreBtn.textContent = paragraph.classList.contains('expanded') ? 'Read less' : 'Read more';
+  });
+});
+
 
 
 

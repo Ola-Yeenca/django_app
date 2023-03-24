@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Open+Sans:wght@500&family=Poppins:wght@200&family=Roboto:wght@700&display=swap');
+
 
 :root {
   --main-color: #51B4CB;
@@ -6,7 +7,7 @@
   --bg-color: #1f242d;
   --second-bg-color: #323946;
   --text-color: whitesmoke;
-
+  --text-font: 'Open Sans', sans-serif;
 }
 
 html {
@@ -158,6 +159,9 @@ a.active {
 }
 
 span {
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  font-family: 'Roboto', sans-serif;
   color: var(--second-color);
 }
 
@@ -174,6 +178,19 @@ span {
 
 .home-img img {
   width: 30vw;
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
 
 }
 
@@ -223,6 +240,7 @@ span {
 }
 
 .about-content h3 {
+  font-family: var(--text-font);
   font-size: 2.6rem;
   text-align: center;
   text-transform: uppercase;
@@ -236,6 +254,7 @@ span {
 }
 
 .about-content h2 {
+  font-family: var(--text-font);
   text-align: center;
   line-height: 1.2;
   font-size: 3.5rem;
@@ -251,6 +270,38 @@ span {
   font-size: 1.8rem;
   color: var(--text-color);
   margin: 2rem 0 3rem;
+}
+
+#paragraph {
+  max-height: 100px;
+  overflow: hidden;
+}
+
+#paragraph.expanded {
+  max-height: none;
+}
+
+button {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  border: 2px solid var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--second-color);
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  color: var(--bg-color);
+  transition: all 0.5s ease-in-out;
+  letter-spacing: .1rem;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+button:hover {
+  background: var(--main-color);
+  color: var(--text-color);
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 0 1rem var(--second-color);
 }
 
 .about-img img {
@@ -789,7 +840,7 @@ span {
   }
 
   .about-img img {
-    width: 90vw;  
+    width: 90vw;
   }
 
   .about p {

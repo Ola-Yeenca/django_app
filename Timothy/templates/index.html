@@ -10,17 +10,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type='text/css' href="{% static 'assets/stylesheet/application.css' %}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Poppins:wght@200&family=Roboto:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <body>
+    <!-- header  -->
     <header class="header">
-      <a href="#" class="logo">Ola Yinka
+      <a href="#" class="logo">{{ home.name }}
         <img class="logo-img"  src="/static/images/Logo.png" alt="logo">
       </a>
       <i class='bx bx-menu' id="menu-icon"></i>
 
+      <!-- navbar  -->
       <navbar class="navbar">
         <a href="#home" class="nav-button active">Home</a>
         <a href="#about" class="nav-button">About</a>
@@ -30,55 +34,48 @@
       </navbar>
     </header>
 
+    <!-- home section  -->
     <section class="home" id="home">
       <div class="home-content">
-        <h3>Software Developer</h3>
-        <h1><span>Hello, I am Ola Yinka</span></h1>
+        <h3>{{ home.description }}</h3>
+        <h1 style="padding: 7rem;"><span class="multiple-text"></span></h1>
 
         <div class="social-media">
-          <a href="www.twitter.com/Ola_Yeenca"><i class='bx bxl-twitter' ></i></a>
-          <a href="www.instagram.com/yinka_96/"><i class='bx bxl-instagram' ></i></a>
-          <a href="www.github.com/Ola-Yeenca"><i class='bx bxl-github' ></i></a>
-          <a href="www.linkedin.com/in/timothy-olaonipekun-omoniyi-aa8975186/"><i class='bx bxl-linkedin' ></i></a>
+          <a href="https://twitter.com/Ola_Yeenca" target="_blank"><i class='bx bxl-twitter' ></i></a>
+          <a href="https://www.instagram.com/yinka_96/" target="_blank"><i class='bx bxl-instagram' ></i></a>
+          <a href="https://github.com/Ola-Yeenca" target="_blank"><i class='bx bxl-github' ></i></a>
+          <a href="https://www.linkedin.com/in/timothy-olaonipekun-omoniyi-aa8975186/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
         </div>
 
         <a href="#" class="btn">Download CV</a>
       </div>
 
       <div class="home-img">
-        <img src="/static/images/profile-picture.png" alt="Ola Yinka">
+        <img src="{{ home.image.url }}" alt="Ola Yinka">
       </div>
 
     </section>
 
+    <!-- about section  -->
     <section class="about" id="about">
       <div class="about-img">
-        <img src="/static/images/support.png" alt="Ola Yinka">
+        <img src="{{ about.profile_img.url }}" alt="Ola Yinka">
       </div>
 
         <div class="about-content">
-          <h2 class="heading">About</h2>
-          <h3>Here is a little about me</h3>
-          <p>
-            My name is <span>Timothy Olaonipekun Omoniyi</span>
-            I am a self-taught and bootcamp-trained full-stack developer who recently transitioned into the tech industry.
-            I discovered my love for programming through Python and have been learning the language via various online resources,
-            including Udemy. This eventually led me to complete the Le Wagon Bootcamp in Barcelona, where I gained valuable experience
-            working on group projects. Despite being employed as a delivery driver for Amazon, I have been dedicating my free time
-            to continuing my studies, particularly in the area of Python with a focus on the Django framework.
-            I am currently enrolled in a course offered by Harvard University(CS50) and am making progress towards my goal of becoming
-            a skilled and competent developer. As I am eager to gain more hands-on experience in the field,
-            I would be grateful for any opportunity, even a non-payable internship, to work with a team and contribute
-            to the development of real-world projects. I am committed to continuous learning and personal development,
-            and I believe that such an opportunity would be a valuable step towards achieving my career aspirations.
-          </p>
+          <h2 class="heading">{{ about.heading }}</h2>
+          <h3>{{ about.career }}</h3>
+          <div id="paragraph">
+            <p>{{ about.description }}</p>
+          </div>
 
-          <a href="#" class="btn">Read more</a>
+          <button id="read-more">{{ about.button }}</button>
         </div>
 
       </div>
     </section>
 
+    <!-- tech stack section  -->
     <section class="tech-stack" id="tech-stack">
       <h2 class="heading"><span>Languages</span></h2>
 
@@ -106,9 +103,19 @@
           <h3>Ruby On Rails and Github</h3>
           <p>Thanks to Le Wagon Bootcamp, I've developed my skills as a Ruby on Rails developer, creating impressive applications such as AirOffice and StudyFlow with ease. Their intensive training and live coaching provided expertise in programming languages and web development frameworks. Collaborating with colleagues enabled me to learn how to use Github and also learn from others, hone my skills and gain a deeper understanding of web development. Teamwork and support have been key to our success.</p>
         </div>
+
+        <!-- <div class="tech-stack-box">
+          {% for category in categories %}
+          <h3>{{ category.name }}</h3>
+            {% for skills in category.skills_set.all %}
+              <p>{{ skills.skill_name }}</p>
+            {% endfor %}
+          {% endfor %}
+        </div> -->
       </div></div>
     </section>
 
+    <!-- portfolio section  -->
     <section class="portfolio" id="portfolio">
       <h2 class="heading"> Recent <span>Project</span></h2>
 
@@ -143,21 +150,24 @@
       </div>
     </section>
 
+    <!-- contact section  -->
     <section class="contact" id="contact">
       <h2 class="heading">Reach Out To Me</h2>
 
-      <form action="#">
+      <form method="post">
+        {% csrf_token %}
         <div class="input-box">
-          <input type="text" placeholder="Full Name or Company's Name">
-          <input type="email" placeholder="Email Address">
+            <input type="text" name="name" placeholder="Full Name or Company's Name">
+            <input type="email" name="email" placeholder="Email Address">
         </div>
-
         <div class="input-box">
-          <input type="text" placeholder="Subject">
+            <input type="text" name="subject" placeholder="Subject">
         </div>
-        <textarea name="" id="" cols="30" rows="10" placeholder="Messages"></textarea>
+        <textarea name="message" cols="30" rows="10" placeholder="Messages"></textarea>
         <input type="submit" value="Send Message" class="btn">
-      </form>
+    </form>
+
+
 
       <div class="contact-information">
         <div class="contact-box">
@@ -185,6 +195,16 @@
         <a href="#home"><i class='bx bxs-up-arrow-circle' id="animate-pulse"></i></a>
       </div>
     </footer>
+
+    <!-- scroll reveal -->
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- typed js file link  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+
+    <!-- javascript -->
   <script type="module" src="{% static 'assets/javascript/application.js' %}"></script>
 </body>
 </html>
