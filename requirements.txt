@@ -8,7 +8,7 @@ charset-normalizer==3.0.1
 Django==4.1.7
 django-fontawesome-5==1.0.18
 flatbuffers==23.1.21
-future==-0.18.2
+future==0.18.3
 gast==0.4.0
 google-auth==2.16.0
 google-auth-oauthlib==0.4.6
