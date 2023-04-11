@@ -47,7 +47,8 @@
           <a href="https://www.linkedin.com/in/timothy-olaonipekun-omoniyi-aa8975186/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
         </div>
 
-        <a href="#" class="btn">Download CV</a>
+        <a href="/static/images/Yinka_resume.pdf" download="new_filename.pdf" onclick="return confirm('Do you want to download the PDF file?')" class="btn">Download CV</a>
+
       </div>
 
       <div class="home-img">
@@ -121,7 +122,7 @@
 
       <div class="portfolio-container">
         <div class="portfolio-box">
-          <img src="/static/images/airoffice.png" alt="AirOffice">
+          <img src="/static/images/airoffice.png" alt="StudyFlow">
           <div class="portfolio-layer">
             <h4>AirOffice</h4>
 
@@ -139,14 +140,46 @@
           <div class="portfolio-layer">
             <h4>StudyFlow</h4>
 
-            <p>AirOffice is a web application that allows users to book a workspace in a shared office.
-              Users can search for available workspaces by location and date, and book a workspace for a
-              specific time period. The application also allows users to create a profile and manage
-              their bookings.</p>
+            <p>StudyFlow is a web application that helps students schedule, study and create forums.
+              StudyFlow is a powerful web application designed to help students organize their study routine,
+              enhance their learning experience, and achieve academic success. With StudyFlow, students can
+              easily create a personalized study schedule that fits their unique needs and preferences.
+              </p>
 
               <a href="https://study-flow.herokuapp.com/" class="btn">View Project</a>
           </div>
         </div>
+
+        <div class="portfolio-box">
+          <img src="/static/images/3d-animate.png" alt="3d-animate ">
+          <div class="portfolio-layer">
+            <h4>Simple Vote System</h4>
+
+            <p>I've created a Python-based voting system that allows users to create, select, and view candidates,
+              voters, and their corresponding votes. It features a user authentication system, scalability to handle
+              large volumes of data, and high-level security to protect user data. This tool is perfect for any
+              organization looking to streamline their voting process and improve the accuracy and transparency of their results.
+              </p>
+
+              <a href="https://github.com/Ola-Yeenca/simple-voting-system" class="btn">View Project</a>
+          </div>
+        </div>
+
+        <div class="portfolio-box">
+          <img src="/static/images/3d-animate.png" alt="3d-animate ">
+          <div class="portfolio-layer">
+            <h4>Tic Tac Toe</h4>
+
+            <p>
+              UNDER CONSTRUCTION...
+              Building a tic tac toe game with Python and Django frameworks.
+              </p>
+
+              <a href="https://github.com/Ola-Yeenca/Tic-Tac-Toe" class="btn">View Project</a>
+          </div>
+        </div>
+
+
       </div>
     </section>
 
@@ -154,7 +187,7 @@
     <section class="contact" id="contact">
       <h2 class="heading">Reach Out To Me</h2>
 
-      <form method="post">
+    <!-- <form method="post">
         {% csrf_token %}
         <div class="input-box">
             <input type="text" name="name" placeholder="Full Name or Company's Name">
@@ -165,14 +198,14 @@
         </div>
         <textarea name="message" cols="30" rows="10" placeholder="Messages"></textarea>
         <input type="submit" value="Send Message" class="btn">
-    </form>
+    </form> -->
 
 
 
       <div class="contact-information">
         <div class="contact-box">
           <i class='bx bx-phone-call' id="animate-pulse"></i>
-          <p>+34 631 789 277</p>
+          <p class="phone-num">+34 631 789 277</p>
         </div>
 
         <div class="contact-box">

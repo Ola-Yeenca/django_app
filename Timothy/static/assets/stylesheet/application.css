@@ -409,6 +409,7 @@ button:hover {
 
 .portfolio-box img {
   width: 200%;
+  height: 450px;
   transition: all 0.5s ease-in-out;
 }
 
@@ -457,6 +458,13 @@ button:hover {
   letter-spacing: .1rem;
   cursor: pointer;
   font-weight: 500;
+}
+
+.btn:hover {
+  background: var(--main-color);
+  color: var(--text-color);
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 0 1rem var(--second-color);
 }
 
 .contact h2 {
@@ -560,6 +568,10 @@ button:hover {
   font-size: 3rem;
   margin-bottom: 1rem;
   color: var(--second-color);
+}
+
+.phone-num {
+  color: var(--text-color);
 }
 
 #animate-pulse {
